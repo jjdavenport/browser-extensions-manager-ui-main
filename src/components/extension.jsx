@@ -1,7 +1,7 @@
 const Extension = ({ data }) => {
   return (
     <>
-      <div>
+      <li>
         <div>
           <img src={data.logo} />
           <div>
@@ -13,7 +13,7 @@ const Extension = ({ data }) => {
           <button>Remove</button>
           <button></button>
         </div>
-      </div>
+      </li>
     </>
   );
 };

@@ -1,13 +1,20 @@
 const Footer = () => {
   return (
     <>
-      <div className="">
+      <footer className="text-center text-xs">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge">
+        <a
+          className="pl-1 underline"
+          href="https://www.frontendmentor.io?ref=challenge"
+        >
           Frontend Mentor
         </a>
-        . Coded by <a href="https://github.com/jjavenport">jjdavenport</a>.
-      </div>
+        . Coded by{" "}
+        <a className="underline" href="https://github.com/jjavenport">
+          jjdavenport
+        </a>
+        .
+      </footer>
     </>
   );
 };
