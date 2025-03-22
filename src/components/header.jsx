@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex w-full justify-between">
+      <header className="flex w-full justify-between bg-white">
         <img src={logoIcon} />
         <button onClick={() => setDarkMode(!darkMode)}>
           <img

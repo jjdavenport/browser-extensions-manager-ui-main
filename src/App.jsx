@@ -4,12 +4,13 @@ import Nav from "./components/nav";
 import Header from "./components/header";
 import data from "./assets/data.json";
 import Wrapper from "./components/wrapper";
+import Container from "./components/container";
 
 function App() {
   return (
     <>
       <Wrapper>
-        <div className="flex w-full max-w-5xl flex-col gap-4 p-4">
+        <Container>
           <Header />
           <Nav />
           <main>
@@ -19,7 +20,7 @@ function App() {
               ))}
             </ul>
           </main>
-        </div>
+        </Container>
         <Footer />
       </Wrapper>
     </>
