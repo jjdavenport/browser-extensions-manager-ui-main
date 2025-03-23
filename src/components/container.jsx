@@ -1,7 +1,9 @@
 const Container = ({ children }) => {
   return (
     <>
-      <div className="flex w-full max-w-5xl flex-col gap-4 p-4">{children}</div>
+      <div className="flex w-full max-w-6xl flex-1 flex-col gap-10 p-10">
+        {children}
+      </div>
     </>
   );
 };

@@ -13,8 +13,8 @@ function App() {
         <Container>
           <Header />
           <Nav />
-          <main>
-            <ul>
+          <main className="flex flex-1">
+            <ul className="grid grid-cols-3 grid-rows-4 gap-4">
               {data.map((i, index) => (
                 <Extension key={index} data={i} />
               ))}
