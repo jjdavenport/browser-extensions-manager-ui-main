@@ -1,31 +1,44 @@
 import { useState } from "react";
 import NavButton from "./nav-button";
 
-const Nav = () => {
+const Nav = ({ setData, data }) => {
   const [state, setState] = useState("all");
+
+  const filter = (state) => {
+    setState(state);
+    setData(
+      state === "all"
+        ? data
+        : data.filter((item) =>
+            state === "active" ? item.isActive : !item.isActive,
+          ),
+    );
+  };
 
   return (
     <>
-      <section className="flex justify-between">
-        <h1 className="text-2xl">Extensions List</h1>
+      <section className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
+          Extensions List
+        </h1>
         <nav>
           <ul className="flex gap-4">
             <NavButton
               buttonState="all"
               state={state}
-              onClick={() => setState("all")}
+              onClick={() => filter("all")}
               text="All"
             />
             <NavButton
               buttonState="active"
               state={state}
-              onClick={() => setState("active")}
+              onClick={() => filter("active")}
               text="Active"
             />
             <NavButton
               buttonState="inactive"
               state={state}
-              onClick={() => setState("inactive")}
+              onClick={() => filter("inactive")}
               text="Inactive"
             />
           </ul>

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <footer className="text-center text-xs">
+      <footer className="dark:text-neutral-0 text-center text-xs text-neutral-900">
         Challenge by
         <a
           className="pl-1 underline"
@@ -10,7 +10,7 @@ const Footer = () => {
           Frontend Mentor
         </a>
         . Coded by{" "}
-        <a className="underline" href="https://github.com/jjavenport">
+        <a className="underline" href="https://github.com/jjdavenport">
           jjdavenport
         </a>
         .

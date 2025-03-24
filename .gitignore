@@ -63,5 +63,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-tailwind.config.js
