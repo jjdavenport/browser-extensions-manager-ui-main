@@ -36,8 +36,13 @@ const Header = () => {
           </defs>
         </svg>
         <button
-          className="cursor-pointer rounded-lg bg-neutral-100 p-3 shadow-2xs transition-all duration-300 ease-in-out dark:bg-neutral-700"
+          className="cursor-pointer rounded-lg bg-neutral-100 p-3 shadow-2xs transition-discrete duration-300 ease-in-out hover:bg-neutral-300 focus:outline-2 focus:outline-offset-2 focus:outline-red-500 dark:bg-neutral-700 dark:hover:bg-neutral-600 focus:dark:bg-neutral-600 dark:focus:outline-red-400"
           onClick={() => setDarkMode(!darkMode)}
+          style={{
+            "--transition-property": "background-color, box-shadow, transform",
+            "--transition-duration": "300ms",
+            "--transition-timing": "ease-in-out",
+          }}
         >
           <img
             className={`${darkMode ? "scale-100" : "scale-0"} absolute size-5 transition-all duration-300 ease-in-out`}
