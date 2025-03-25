@@ -23,7 +23,7 @@ const Extension = ({ data }) => {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <button className="dark:text-neutral-0 hover:text-neutral-0 dark:focus:text-neutral-0 cursor-pointer rounded-full px-4 py-[6px] font-medium text-neutral-900 outline outline-neutral-300 transition-colors duration-300 ease-in-out hover:bg-red-700 hover:outline-transparent focus:bg-neutral-100 focus:text-neutral-900 focus:outline-2 focus:outline-offset-2 focus:outline-red-400 dark:outline-neutral-600 dark:hover:bg-red-500 dark:hover:text-neutral-900 dark:hover:outline-transparent focus:dark:bg-neutral-600 dark:focus:outline-red-400">
+          <button className="dark:text-neutral-0 hover:text-neutral-0 dark:focus:text-neutral-0 cursor-pointer rounded-full px-4 py-[6px] font-medium text-neutral-900 outline outline-neutral-300 transition-colors duration-300 ease-in-out hover:bg-red-700 hover:outline-transparent focus:bg-neutral-100 focus:text-neutral-900 focus:outline-2 focus:outline-offset-2 focus:outline-red-500 dark:outline-neutral-600 dark:hover:bg-red-500 dark:hover:text-neutral-900 dark:hover:outline-transparent focus:dark:bg-neutral-600 dark:focus:outline-red-400">
             Remove
           </button>
           <ToggleButton onClick={toggle} active={active} />
