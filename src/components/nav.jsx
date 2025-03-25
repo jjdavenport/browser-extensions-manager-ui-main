@@ -17,7 +17,7 @@ const Nav = ({ setData, data }) => {
 
   return (
     <>
-      <section className="flex items-center justify-between">
+      <section className="flex flex-col items-center justify-between gap-4 md:flex-row">
         <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
           Extensions List
         </h1>

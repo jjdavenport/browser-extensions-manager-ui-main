@@ -17,7 +17,7 @@ function App() {
           <Header />
           <Nav data={filteredData} setData={setFilteredData} />
           <main className="flex flex-1">
-            <ul className="grid grid-cols-3 grid-rows-4 gap-4">
+            <ul className="flex grid-cols-2 grid-rows-4 flex-col gap-4 md:grid xl:grid-cols-3">
               {filteredData.map((i, index) => (
                 <Extension key={index} data={i} />
               ))}

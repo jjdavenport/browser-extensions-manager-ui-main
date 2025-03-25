@@ -10,7 +10,7 @@ const Extension = ({ data }) => {
 
   return (
     <>
-      <li className="bg-neutral-0 flex flex-col justify-between gap-4 rounded-2xl p-5 shadow-md dark:bg-neutral-800 dark:outline dark:outline-neutral-600">
+      <li className="bg-neutral-0 flex flex-col justify-between gap-4 rounded-2xl border border-neutral-200 p-5 shadow-md dark:border-neutral-700 dark:bg-neutral-800 dark:outline dark:outline-neutral-600">
         <div className="flex items-start gap-4">
           <img src={data.logo} />
           <div className="flex flex-col gap-2">

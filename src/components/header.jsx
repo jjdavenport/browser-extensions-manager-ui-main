@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex w-full justify-between rounded-2xl bg-white px-5 py-4 shadow-md dark:bg-neutral-800">
+      <header className="flex w-full justify-between rounded-2xl border border-neutral-200 bg-white px-3 py-3 shadow-md md:px-5 md:py-4 dark:border-transparent dark:bg-neutral-800">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="179"
