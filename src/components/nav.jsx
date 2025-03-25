@@ -1,18 +1,22 @@
 import { useState } from "react";
 import NavButton from "./nav-button";
 
-const Nav = ({ setData, data }) => {
-  const [state, setState] = useState("all");
+const Nav = ({ setFilteredData, data }) => {
+  const [buttonState, setButtonState] = useState("all");
 
-  const filter = (state) => {
-    setState(state);
-    setData(
-      state === "all"
-        ? data
-        : data.filter((item) =>
-            state === "active" ? item.isActive : !item.isActive,
-          ),
-    );
+  const filterAll = () => {
+    setButtonState("all");
+    setFilteredData(data);
+  };
+
+  const filterActive = () => {
+    setButtonState("active");
+    setFilteredData(data.filter((i) => i.isActive));
+  };
+
+  const filterInactive = () => {
+    setButtonState("inactive");
+    setFilteredData(data.filter((i) => !i.isActive));
   };
 
   return (
@@ -25,20 +29,20 @@ const Nav = ({ setData, data }) => {
           <ul className="flex gap-4">
             <NavButton
               buttonState="all"
-              state={state}
-              onClick={() => filter("all")}
+              state={buttonState}
+              onClick={() => filterAll("all")}
               text="All"
             />
             <NavButton
               buttonState="active"
-              state={state}
-              onClick={() => filter("active")}
+              state={buttonState}
+              onClick={() => filterActive("active")}
               text="Active"
             />
             <NavButton
               buttonState="inactive"
-              state={state}
-              onClick={() => filter("inactive")}
+              state={buttonState}
+              onClick={() => filterInactive("inactive")}
               text="Inactive"
             />
           </ul>

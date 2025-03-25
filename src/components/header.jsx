@@ -4,7 +4,6 @@ import useTheme from "../hooks/theme-provider";
 
 const Header = () => {
   const { darkMode, setDarkMode } = useTheme();
-
   return (
     <>
       <header className="flex w-full justify-between rounded-2xl border border-neutral-200 bg-white px-3 py-3 shadow-md md:px-5 md:py-4 dark:border-transparent dark:bg-neutral-800">
