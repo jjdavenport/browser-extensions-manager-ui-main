@@ -11,7 +11,7 @@ const ToggleButton = ({ active, onClick }) => {
         }}
       >
         <div
-          className={`${!active ? "bg-neutral-0" : "bg-neutral-0 translate-x-5"} size-4 cursor-pointer rounded-full transition-all duration-300 ease-in-out`}
+          className={`${!active ? "translate-x-0" : "translate-x-5"} bg-neutral-0 size-4 cursor-pointer rounded-full transition-all duration-300 ease-in-out`}
         ></div>
       </button>
     </>

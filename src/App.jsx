@@ -8,19 +8,26 @@ import Container from "./components/container";
 import List from "./components/list";
 
 function App() {
-  const unfilteredData = data;
-  const [filteredData, setFilteredData] = useState(data);
+  const [unfilteredData, setUnfilteredData] = useState(data);
+  const [filter, setFilter] = useState("all");
+
+  const filteredData = unfilteredData.filter((i) =>
+    filter === "all"
+      ? true
+      : filter === "active"
+        ? i.isActive
+        : filter === "inactive"
+          ? !i.isActive
+          : false,
+  );
+
   return (
     <>
       <Wrapper>
         <Container>
           <Header />
-          <Nav
-            data={unfilteredData}
-            filteredData={filteredData}
-            setFilteredData={setFilteredData}
-          />
-          <List data={filteredData} setData={setFilteredData} />
+          <Nav filter={filter} setFilter={setFilter} />
+          <List data={filteredData} setData={setUnfilteredData} />
         </Container>
         <Footer />
       </Wrapper>

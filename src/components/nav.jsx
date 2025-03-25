@@ -1,24 +1,6 @@
-import { useState } from "react";
 import NavButton from "./nav-button";
 
-const Nav = ({ setFilteredData, data }) => {
-  const [buttonState, setButtonState] = useState("all");
-
-  const filterAll = () => {
-    setButtonState("all");
-    setFilteredData(data);
-  };
-
-  const filterActive = () => {
-    setButtonState("active");
-    setFilteredData(data.filter((i) => i.isActive));
-  };
-
-  const filterInactive = () => {
-    setButtonState("inactive");
-    setFilteredData(data.filter((i) => !i.isActive));
-  };
-
+const Nav = ({ filter, setFilter }) => {
   return (
     <>
       <section className="flex flex-col items-center justify-between gap-4 md:flex-row">
@@ -29,20 +11,20 @@ const Nav = ({ setFilteredData, data }) => {
           <ul className="flex gap-4">
             <NavButton
               buttonState="all"
-              state={buttonState}
-              onClick={() => filterAll("all")}
+              state={filter}
+              onClick={() => setFilter("all")}
               text="All"
             />
             <NavButton
               buttonState="active"
-              state={buttonState}
-              onClick={() => filterActive("active")}
+              state={filter}
+              onClick={() => setFilter("active")}
               text="Active"
             />
             <NavButton
               buttonState="inactive"
-              state={buttonState}
-              onClick={() => filterInactive("inactive")}
+              state={filter}
+              onClick={() => setFilter("inactive")}
               text="Inactive"
             />
           </ul>
